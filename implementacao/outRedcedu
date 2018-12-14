@@ -1,0 +1,131 @@
+digraph {
+	programa2 [label=programa]
+	lista_declaracoes3 [label=lista_declaracoes]
+	programa2 -> lista_declaracoes3
+	declaracao4 [label=declaracao]
+	lista_declaracoes3 -> declaracao4
+	declaracao_funcao5 [label=declaracao_funcao]
+	declaracao4 -> declaracao_funcao5
+	inteiro6 [label=inteiro]
+	declaracao_funcao5 -> inteiro6
+	cabecalho7 [label=cabecalho]
+	declaracao_funcao5 -> cabecalho7
+	none8 [label="soma "]
+	cabecalho7 -> none8
+	none9 [label="( "]
+	cabecalho7 -> none9
+	lista_parametros10 [label=lista_parametros]
+	cabecalho7 -> lista_parametros10
+	none11 [label=") "]
+	cabecalho7 -> none11
+	corpo12 [label=corpo]
+	cabecalho7 -> corpo12
+	none13 [label="fim "]
+	cabecalho7 -> none13
+	parametro14 [label=parametro]
+	lista_parametros10 -> parametro14
+	parametro15 [label=parametro]
+	lista_parametros10 -> parametro15
+	parametro16 [label=parametro]
+	lista_parametros10 -> parametro16
+	parametro17 [label=parametro]
+	lista_parametros10 -> parametro17
+	acao18 [label=acao]
+	corpo12 -> acao18
+	inteiro19 [label=inteiro]
+	parametro14 -> inteiro19
+	none20 [label=": "]
+	parametro14 -> none20
+	none21 [label="a "]
+	parametro14 -> none21
+	inteiro22 [label=inteiro]
+	parametro15 -> inteiro22
+	none23 [label=": "]
+	parametro15 -> none23
+	none24 [label="b "]
+	parametro15 -> none24
+	inteiro25 [label=inteiro]
+	parametro16 -> inteiro25
+	none26 [label=": "]
+	parametro16 -> none26
+	none27 [label="c "]
+	parametro16 -> none27
+	inteiro28 [label=inteiro]
+	parametro17 -> inteiro28
+	none29 [label=": "]
+	parametro17 -> none29
+	none30 [label="d "]
+	parametro17 -> none30
+	retorna31 [label=retorna]
+	acao18 -> retorna31
+	none32 [label="retorna "]
+	retorna31 -> none32
+	none33 [label="( "]
+	retorna31 -> none33
+	expressao34 [label=expressao]
+	retorna31 -> expressao34
+	none35 [label=") "]
+	retorna31 -> none35
+	expressao_logica36 [label=expressao_logica]
+	expressao34 -> expressao_logica36
+	expressao_simples37 [label=expressao_simples]
+	expressao_logica36 -> expressao_simples37
+	expressao_aditiva38 [label=expressao_aditiva]
+	expressao_simples37 -> expressao_aditiva38
+	expressao_multiplicativa39 [label=expressao_multiplicativa]
+	expressao_aditiva38 -> expressao_multiplicativa39
+	"+40" [label="+"]
+	expressao_aditiva38 -> "+40"
+	expressao_multiplicativa41 [label=expressao_multiplicativa]
+	expressao_aditiva38 -> expressao_multiplicativa41
+	"+42" [label="+"]
+	expressao_aditiva38 -> "+42"
+	expressao_multiplicativa43 [label=expressao_multiplicativa]
+	expressao_aditiva38 -> expressao_multiplicativa43
+	-44 [label="-"]
+	expressao_aditiva38 -> -44
+	expressao_multiplicativa45 [label=expressao_multiplicativa]
+	expressao_aditiva38 -> expressao_multiplicativa45
+	expressao_unaria46 [label=expressao_unaria]
+	expressao_multiplicativa39 -> expressao_unaria46
+	expressao_unaria47 [label=expressao_unaria]
+	expressao_multiplicativa41 -> expressao_unaria47
+	expressao_unaria48 [label=expressao_unaria]
+	expressao_multiplicativa43 -> expressao_unaria48
+	expressao_unaria49 [label=expressao_unaria]
+	expressao_multiplicativa45 -> expressao_unaria49
+	"*50" [label="*"]
+	expressao_multiplicativa45 -> "*50"
+	expressao_unaria51 [label=expressao_unaria]
+	expressao_multiplicativa45 -> expressao_unaria51
+	fator52 [label=fator]
+	expressao_unaria46 -> fator52
+	fator53 [label=fator]
+	expressao_unaria47 -> fator53
+	fator54 [label=fator]
+	expressao_unaria48 -> fator54
+	fator55 [label=fator]
+	expressao_unaria49 -> fator55
+	fator56 [label=fator]
+	expressao_unaria51 -> fator56
+	var57 [label=var]
+	fator52 -> var57
+	var58 [label=var]
+	fator53 -> var58
+	var59 [label=var]
+	fator54 -> var59
+	var60 [label=var]
+	fator55 -> var60
+	numero61 [label=numero]
+	fator56 -> numero61
+	none62 [label="a "]
+	var57 -> none62
+	none63 [label="b "]
+	var58 -> none63
+	none64 [label="c "]
+	var59 -> none64
+	none65 [label="d "]
+	var60 -> none65
+	none66 [label="2 "]
+	numero61 -> none66
+}

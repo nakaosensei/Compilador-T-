@@ -1,0 +1,4 @@
+Para executar a analise sintatica, invoque:
+python3 nkParser exemplos/fat.tpp
+
+

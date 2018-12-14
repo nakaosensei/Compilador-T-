@@ -1,0 +1,99 @@
+programa  ::=   lista_declaracoes
+
+lista_declaracoes ::=   lista_declaracoes declaracao 
+                        | declaracao
+
+declaracao  ::=   declaracao_variavel declaracao_funcao 
+                | declaracao_funcao
+
+declaracao_variavel  ::= declaracao_variavel variavel
+                    | variavel
+
+variavel  ::= tipo DOISPONTOS var
+
+var  ::= var "," ID
+    | ID "[" INTEIRO "]"
+    | ID "[" INTEIRO "]" "[" INTEIRO "]"
+    | ID
+
+tipo  ::= INTEIRO | FLUTUANTE
+
+declaracao_funcao  ::= declaracao_funcao funcao
+                  | funcao
+
+funcao  ::= tipo ID "(" declaracao_parametros ")" declaracao_composta FIM
+        | tipo ID "(" declaracao_parametros ")" FIM
+
+declaracao_parametros ::= lista_parametros | vazio
+
+lista_parametros ::=  lista_parametros "," parametro
+                      | parametro
+
+parametro  ::=  tipo DOISPONTOS ID "[" INTEIRO "]"
+                | tipo DOISPONTOS ID "[" INTEIRO "]" "[" INTEIRO "]"
+                | tipo DOISPONTOS ID
+                | vazio
+
+declaracao_composta ::= declaracoes_locais 
+                        | lista_statements
+
+declaracoes_locais ::=  declaracoes_locais declaracao_variavel
+                        | vazio
+
+lista_statements ::=  lista_statements statement 
+                      | vazio
+
+statement  ::=    expressao
+                  | declaracao_composta
+                  | declaracao_selecao
+                  | declaracao_iteracao
+                  | declaracao_atribuicao
+                  | declaracao_leitura
+                  | declaracao_escrita
+                  | declaracao_retorno
+                  | erro
+
+declaracao_selecao  ::=   SE expressao ENTAO lista_statements FIM
+                          | SE expressao ENTAO lista_statements SENAO lista_statements FIM
+
+declaracao_iteracao ::=   REPITA lista_statements ATE expressao
+
+declaracao_atribuicao ::= var ":=" expressao
+
+declaracao_leitura ::= LEIA "(" ID ")"
+
+declaracao_escrita ::= ESCREVA "(" expressao ")"
+
+declaracao_retorno ::= RETORNA "(" expressao ")"
+
+expressao ::= expressao_simples 
+              | chamada_funcao
+
+expressao_simples ::= unario expressao_soma operador_relacional expressao_soma
+              | expressao_soma
+
+unario  ::= operador_soma expressao
+
+operador_relacional ::= "<" | ">" | "=" | "<>" | "<=" | ">="
+
+expressao_soma ::= expressao_soma operador_soma termo
+                   | termo
+
+operador_soma ::= "+" | "-"
+
+termo ::= termo operador_multiplicacao fator 
+          | fator
+
+operador_multiplicacao ::=  "*" | "/"
+
+fator ::= "(" expressao ")"
+          | numero
+          | ID
+
+numero ::= NUM_INTEIRO | NUM_PONTO_FLUTUANTE | NUM_NOTACAO_CIENTIFICA
+
+chamadafuncao  ::= ID "(" lista_argumentos ")" 
+
+lista_argumentos  ::= lista_argumentos "," expressao
+           | expressao
+           | vazio

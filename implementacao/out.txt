@@ -1,0 +1,37 @@
+name:principal
+type:inteiro
+isArray:0
+dx:0
+dy:0
+scope:global
+isUsed:0
+isFunction:1
+params
+[]
+
+
+name:b
+type:flutuante
+isArray:0
+dx:0
+dy:0
+scope:principal
+isUsed:1
+isFunction:0
+params
+[]
+
+
+Input:
+{Erro: Variável 'a' não declarada}
+{Erro: Função principal deveria retornar inteiro, mas retorna vazio}
+
+inteiro principal()
+	flutuante: b
+
+	b := a + 1.0
+
+fim
+
+SEMANTIC ERROR:a e utilizada no escopo principal sem ter sido declarada
+SEMANTIC ERROR:funcao principal sem retorno, deveria retornar inteiro

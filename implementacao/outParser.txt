@@ -1,0 +1,335 @@
+Input:
+inteiro: n
+flutuante: a[10]
+
+
+inteiro fatorial(inteiro: n)
+    inteiro: fat
+    se n > 0 então {não calcula se n > 0}
+        fat := 1
+        repita
+            fat := fat * n
+            n := n - 1
+        até n = 0
+        retorna(fat) {retorna o valor do fatorial de n}
+    senão
+        retorna(0)
+    fim
+fim
+
+inteiro principal()
+    leia(n)
+    escreva(fatorial(n))
+    retorna(0)
+fim
+
+Erro!
+{não calcula se n > 0}
+Erro!
+{retorna o valor do fatorial de n}
+programa
+--lista_declaracoes 
+--lista_declaracoes declaracao 
+--lista_declaracoes declaracao --declaracao_funcao 
+--lista_declaracoes declaracao --declaracao_funcao --tipo cabecalho 
+--declaracao --declaracao_variaveis --tipo cabecalho --inteiro --principal ( lista_parametros ) corpo fim 
+--declaracao_variaveis --tipo : lista_variaveis --inteiro --fatorial ( lista_parametros ) corpo fim --------none ----corpo acao --
+--tipo : lista_variaveis --flutuante ----var --------parametro ----corpo acao ------corpo acao --retorna 
+--inteiro ----var ----a indice --tipo : n --corpo acao --se --corpo acao --escreva --retorna ( expressao ) 
+----n ----[ expressao ] --inteiro ------none --declaracao_variaveis --se expressao então corpo senão corpo fim --none --leia --escreva ( expressao ) ------expressao_logica --
+------expressao_logica --------tipo : lista_variaveis ----expressao_logica ----corpo acao ----corpo acao ------leia ( var ) ------expressao_logica ----expressao_simples 
+--expressao_simples --inteiro ----var --expressao_simples --corpo acao --CMT --none --retorna ------n ----expressao_simples --expressao_aditiva 
+--expressao_aditiva ----fat --expressao_simples operador_relacional expressao_aditiva --corpo acao --retorna ------retorna ( expressao ) ----expressao_aditiva --expressao_multiplicativa 
+--expressao_multiplicativa ----expressao_aditiva --> --expressao_multiplicativa --corpo acao --repita --retorna ( expressao ) ------expressao_logica ----expressao_multiplicativa --expressao_unaria 
+--expressao_unaria --expressao_multiplicativa ----expressao_unaria --corpo acao --expressao --repita corpo até expressao ------expressao_logica ----expressao_simples --expressao_unaria --fator 
+--fator --expressao_unaria --fator --none --CMT --atribuicao ----corpo acao ----expressao_logica --expressao_simples --expressao_aditiva --fator --numero 
+--numero --fator --numero ------var := expressao --corpo acao --expressao --expressao_simples --expressao_aditiva --expressao_multiplicativa --chamada_funcao --0 
+--10 --var --0 --fat ----expressao_logica --none --expressao --atribuicao --expressao_simples operador_relacional expressao_aditiva --expressao_multiplicativa --expressao_unaria --fatorial ( lista_argumentos ) --
+----n ------expressao_simples ----atribuicao --var := expressao --expressao_aditiva --= --expressao_multiplicativa --expressao_unaria --fator ------expressao --
+----expressao_aditiva --var := expressao --n ----expressao_logica --expressao_multiplicativa ----expressao_unaria --fator --numero --expressao_logica 
+--expressao_multiplicativa --fat ----expressao_logica ----expressao_simples --expressao_unaria --fator --var --0 --expressao_simples 
+--expressao_unaria ----expressao_simples --expressao_aditiva --fator --numero --fat ----expressao_aditiva 
+--fator --expressao_aditiva --expressao_aditiva operador_soma expressao_multiplicativa --var --0 ----expressao_multiplicativa 
+--numero --expressao_multiplicativa --expressao_multiplicativa --- --expressao_unaria --n ----expressao_unaria 
+--1 --expressao_multiplicativa operador_multiplicacao expressao_unaria --expressao_unaria ----fator ----fator 
+----expressao_unaria --* --fator --fator --numero --var 
+--fator ----var --var --1 --n 
+--var --n --n ----
+--fat ----
+--
+programa
+└── lista_declaracoes
+    ├── declaracao
+    │   └── declaracao_funcao
+    │       ├── cabecalho
+    │       │   ├── (
+    │       │   ├── )
+    │       │   ├── corpo
+    │       │   │   ├── acao
+    │       │   │   │   └── retorna
+    │       │   │   │       ├── (
+    │       │   │   │       ├── )
+    │       │   │   │       ├── expressao
+    │       │   │   │       │   └── expressao_logica
+    │       │   │   │       │       └── expressao_simples
+    │       │   │   │       │           └── expressao_aditiva
+    │       │   │   │       │               └── expressao_multiplicativa
+    │       │   │   │       │                   └── expressao_unaria
+    │       │   │   │       │                       └── fator
+    │       │   │   │       │                           └── numero
+    │       │   │   │       │                               └── 0
+    │       │   │   │       └── retorna
+    │       │   │   └── corpo
+    │       │   │       ├── acao
+    │       │   │       │   └── escreva
+    │       │   │       │       ├── (
+    │       │   │       │       ├── )
+    │       │   │       │       ├── escreva
+    │       │   │       │       └── expressao
+    │       │   │       │           └── expressao_logica
+    │       │   │       │               └── expressao_simples
+    │       │   │       │                   └── expressao_aditiva
+    │       │   │       │                       └── expressao_multiplicativa
+    │       │   │       │                           └── expressao_unaria
+    │       │   │       │                               └── fator
+    │       │   │       │                                   └── chamada_funcao
+    │       │   │       │                                       ├── (
+    │       │   │       │                                       ├── )
+    │       │   │       │                                       ├── fatorial
+    │       │   │       │                                       └── lista_argumentos
+    │       │   │       │                                           └── expressao
+    │       │   │       │                                               └── expressao_logica
+    │       │   │       │                                                   └── expressao_simples
+    │       │   │       │                                                       └── expressao_aditiva
+    │       │   │       │                                                           └── expressao_multiplicativa
+    │       │   │       │                                                               └── expressao_unaria
+    │       │   │       │                                                                   └── fator
+    │       │   │       │                                                                       └── var
+    │       │   │       │                                                                           └── n
+    │       │   │       └── corpo
+    │       │   │           ├── acao
+    │       │   │           │   └── leia
+    │       │   │           │       ├── (
+    │       │   │           │       ├── )
+    │       │   │           │       ├── leia
+    │       │   │           │       └── var
+    │       │   │           │           └── n
+    │       │   │           └── corpo
+    │       │   │               └── none80
+    │       │   ├── fim
+    │       │   ├── lista_parametros
+    │       │   │   └── none35
+    │       │   └── principal
+    │       └── tipo
+    │           └── inteiro
+    └── lista_declaracoes
+        ├── declaracao
+        │   └── declaracao_funcao
+        │       ├── cabecalho
+        │       │   ├── (
+        │       │   ├── )
+        │       │   ├── corpo
+        │       │   │   ├── acao
+        │       │   │   │   └── se
+        │       │   │   │       ├── corpo
+        │       │   │   │       │   ├── acao
+        │       │   │   │       │   │   └── LexToken(CMT,'{retorna o valor do fatorial de n}',1,239)
+        │       │   │   │       │   └── corpo
+        │       │   │   │       │       ├── acao
+        │       │   │   │       │       │   └── retorna
+        │       │   │   │       │       │       ├── (
+        │       │   │   │       │       │       ├── )
+        │       │   │   │       │       │       ├── expressao
+        │       │   │   │       │       │       │   └── expressao_logica
+        │       │   │   │       │       │       │       └── expressao_simples
+        │       │   │   │       │       │       │           └── expressao_aditiva
+        │       │   │   │       │       │       │               └── expressao_multiplicativa
+        │       │   │   │       │       │       │                   └── expressao_unaria
+        │       │   │   │       │       │       │                       └── fator
+        │       │   │   │       │       │       │                           └── var
+        │       │   │   │       │       │       │                               └── fat
+        │       │   │   │       │       │       └── retorna
+        │       │   │   │       │       └── corpo
+        │       │   │   │       │           ├── acao
+        │       │   │   │       │           │   └── repita
+        │       │   │   │       │           │       ├── até
+        │       │   │   │       │           │       ├── corpo
+        │       │   │   │       │           │       │   ├── acao
+        │       │   │   │       │           │       │   │   └── expressao
+        │       │   │   │       │           │       │   │       └── atribuicao
+        │       │   │   │       │           │       │   │           ├── :=
+        │       │   │   │       │           │       │   │           ├── expressao
+        │       │   │   │       │           │       │   │           │   └── expressao_logica
+        │       │   │   │       │           │       │   │           │       └── expressao_simples
+        │       │   │   │       │           │       │   │           │           └── expressao_aditiva
+        │       │   │   │       │           │       │   │           │               ├── expressao_aditiva
+        │       │   │   │       │           │       │   │           │               │   └── expressao_multiplicativa
+        │       │   │   │       │           │       │   │           │               │       └── expressao_unaria
+        │       │   │   │       │           │       │   │           │               │           └── fator
+        │       │   │   │       │           │       │   │           │               │               └── var
+        │       │   │   │       │           │       │   │           │               │                   └── n
+        │       │   │   │       │           │       │   │           │               ├── expressao_multiplicativa
+        │       │   │   │       │           │       │   │           │               │   └── expressao_unaria
+        │       │   │   │       │           │       │   │           │               │       └── fator
+        │       │   │   │       │           │       │   │           │               │           └── numero
+        │       │   │   │       │           │       │   │           │               │               └── 1
+        │       │   │   │       │           │       │   │           │               └── operador_soma
+        │       │   │   │       │           │       │   │           │                   └── -
+        │       │   │   │       │           │       │   │           └── var
+        │       │   │   │       │           │       │   │               └── n
+        │       │   │   │       │           │       │   └── corpo
+        │       │   │   │       │           │       │       ├── acao
+        │       │   │   │       │           │       │       │   └── expressao
+        │       │   │   │       │           │       │       │       └── atribuicao
+        │       │   │   │       │           │       │       │           ├── :=
+        │       │   │   │       │           │       │       │           ├── expressao
+        │       │   │   │       │           │       │       │           │   └── expressao_logica
+        │       │   │   │       │           │       │       │           │       └── expressao_simples
+        │       │   │   │       │           │       │       │           │           └── expressao_aditiva
+        │       │   │   │       │           │       │       │           │               └── expressao_multiplicativa
+        │       │   │   │       │           │       │       │           │                   ├── expressao_multiplicativa
+        │       │   │   │       │           │       │       │           │                   │   └── expressao_unaria
+        │       │   │   │       │           │       │       │           │                   │       └── fator
+        │       │   │   │       │           │       │       │           │                   │           └── var
+        │       │   │   │       │           │       │       │           │                   │               └── fat
+        │       │   │   │       │           │       │       │           │                   ├── expressao_unaria
+        │       │   │   │       │           │       │       │           │                   │   └── fator
+        │       │   │   │       │           │       │       │           │                   │       └── var
+        │       │   │   │       │           │       │       │           │                   │           └── n
+        │       │   │   │       │           │       │       │           │                   └── operador_multiplicacao
+        │       │   │   │       │           │       │       │           │                       └── *
+        │       │   │   │       │           │       │       │           └── var
+        │       │   │   │       │           │       │       │               └── fat
+        │       │   │   │       │           │       │       └── corpo
+        │       │   │   │       │           │       │           └── none188
+        │       │   │   │       │           │       ├── expressao
+        │       │   │   │       │           │       │   └── expressao_logica
+        │       │   │   │       │           │       │       └── expressao_simples
+        │       │   │   │       │           │       │           ├── expressao_aditiva
+        │       │   │   │       │           │       │           │   └── expressao_multiplicativa
+        │       │   │   │       │           │       │           │       └── expressao_unaria
+        │       │   │   │       │           │       │           │           └── fator
+        │       │   │   │       │           │       │           │               └── numero
+        │       │   │   │       │           │       │           │                   └── 0
+        │       │   │   │       │           │       │           ├── expressao_simples
+        │       │   │   │       │           │       │           │   └── expressao_aditiva
+        │       │   │   │       │           │       │           │       └── expressao_multiplicativa
+        │       │   │   │       │           │       │           │           └── expressao_unaria
+        │       │   │   │       │           │       │           │               └── fator
+        │       │   │   │       │           │       │           │                   └── var
+        │       │   │   │       │           │       │           │                       └── n
+        │       │   │   │       │           │       │           └── operador_relacional
+        │       │   │   │       │           │       │               └── =
+        │       │   │   │       │           │       └── repita
+        │       │   │   │       │           └── corpo
+        │       │   │   │       │               ├── acao
+        │       │   │   │       │               │   └── expressao
+        │       │   │   │       │               │       └── atribuicao
+        │       │   │   │       │               │           ├── :=
+        │       │   │   │       │               │           ├── expressao
+        │       │   │   │       │               │           │   └── expressao_logica
+        │       │   │   │       │               │           │       └── expressao_simples
+        │       │   │   │       │               │           │           └── expressao_aditiva
+        │       │   │   │       │               │           │               └── expressao_multiplicativa
+        │       │   │   │       │               │           │                   └── expressao_unaria
+        │       │   │   │       │               │           │                       └── fator
+        │       │   │   │       │               │           │                           └── numero
+        │       │   │   │       │               │           │                               └── 1
+        │       │   │   │       │               │           └── var
+        │       │   │   │       │               │               └── fat
+        │       │   │   │       │               └── corpo
+        │       │   │   │       │                   ├── acao
+        │       │   │   │       │                   │   └── LexToken(CMT,'{não calcula se n > 0}',1,95)
+        │       │   │   │       │                   └── corpo
+        │       │   │   │       │                       └── none159
+        │       │   │   │       ├── corpo
+        │       │   │   │       │   ├── acao
+        │       │   │   │       │   │   └── retorna
+        │       │   │   │       │   │       ├── (
+        │       │   │   │       │   │       ├── )
+        │       │   │   │       │   │       ├── expressao
+        │       │   │   │       │   │       │   └── expressao_logica
+        │       │   │   │       │   │       │       └── expressao_simples
+        │       │   │   │       │   │       │           └── expressao_aditiva
+        │       │   │   │       │   │       │               └── expressao_multiplicativa
+        │       │   │   │       │   │       │                   └── expressao_unaria
+        │       │   │   │       │   │       │                       └── fator
+        │       │   │   │       │   │       │                           └── numero
+        │       │   │   │       │   │       │                               └── 0
+        │       │   │   │       │   │       └── retorna
+        │       │   │   │       │   └── corpo
+        │       │   │   │       │       └── none109
+        │       │   │   │       ├── então
+        │       │   │   │       ├── expressao
+        │       │   │   │       │   └── expressao_logica
+        │       │   │   │       │       └── expressao_simples
+        │       │   │   │       │           ├── expressao_aditiva
+        │       │   │   │       │           │   └── expressao_multiplicativa
+        │       │   │   │       │           │       └── expressao_unaria
+        │       │   │   │       │           │           └── fator
+        │       │   │   │       │           │               └── numero
+        │       │   │   │       │           │                   └── 0
+        │       │   │   │       │           ├── expressao_simples
+        │       │   │   │       │           │   └── expressao_aditiva
+        │       │   │   │       │           │       └── expressao_multiplicativa
+        │       │   │   │       │           │           └── expressao_unaria
+        │       │   │   │       │           │               └── fator
+        │       │   │   │       │           │                   └── var
+        │       │   │   │       │           │                       └── n
+        │       │   │   │       │           └── operador_relacional
+        │       │   │   │       │               └── >
+        │       │   │   │       ├── fim
+        │       │   │   │       ├── se
+        │       │   │   │       └── senão
+        │       │   │   └── corpo
+        │       │   │       ├── acao
+        │       │   │       │   └── declaracao_variaveis
+        │       │   │       │       ├── :
+        │       │   │       │       ├── lista_variaveis
+        │       │   │       │       │   └── var
+        │       │   │       │       │       └── fat
+        │       │   │       │       └── tipo
+        │       │   │       │           └── inteiro
+        │       │   │       └── corpo
+        │       │   │           └── none71
+        │       │   ├── fatorial
+        │       │   ├── fim
+        │       │   └── lista_parametros
+        │       │       └── parametro
+        │       │           ├── :
+        │       │           ├── n
+        │       │           └── tipo
+        │       │               └── inteiro
+        │       └── tipo
+        │           └── inteiro
+        └── lista_declaracoes
+            ├── declaracao
+            │   └── declaracao_variaveis
+            │       ├── :
+            │       ├── lista_variaveis
+            │       │   └── var
+            │       │       ├── a
+            │       │       └── indice
+            │       │           ├── [
+            │       │           ├── ]
+            │       │           └── expressao
+            │       │               └── expressao_logica
+            │       │                   └── expressao_simples
+            │       │                       └── expressao_aditiva
+            │       │                           └── expressao_multiplicativa
+            │       │                               └── expressao_unaria
+            │       │                                   └── fator
+            │       │                                       └── numero
+            │       │                                           └── 10
+            │       └── tipo
+            │           └── flutuante
+            └── lista_declaracoes
+                └── declaracao
+                    └── declaracao_variaveis
+                        ├── :
+                        ├── lista_variaveis
+                        │   └── var
+                        │       └── n
+                        └── tipo
+                            └── inteiro
+

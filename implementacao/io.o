@@ -1,0 +1,136 @@
+	.text
+	.file	"io.ll"
+	.globl	escrevaInteiro
+	.p2align	4, 0x90
+	.type	escrevaInteiro,@function
+escrevaInteiro:                         # @escrevaInteiro
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp0:
+	.cfi_def_cfa_offset 16
+.Ltmp1:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp2:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movl	%edi, %ecx
+	movl	%ecx, -4(%rbp)
+	movl	$.L.str, %edi
+	xorl	%eax, %eax
+	movl	%ecx, %esi
+	callq	printf
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+.Lfunc_end0:
+	.size	escrevaInteiro, .Lfunc_end0-escrevaInteiro
+	.cfi_endproc
+
+	.globl	escrevaFlutuante
+	.p2align	4, 0x90
+	.type	escrevaFlutuante,@function
+escrevaFlutuante:                       # @escrevaFlutuante
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp3:
+	.cfi_def_cfa_offset 16
+.Ltmp4:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp5:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movss	%xmm0, -4(%rbp)
+	movss	-4(%rbp), %xmm0         # xmm0 = mem[0],zero,zero,zero
+	cvtss2sd	%xmm0, %xmm0
+	movl	$.L.str.1, %edi
+	movb	$1, %al
+	callq	printf
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+.Lfunc_end1:
+	.size	escrevaFlutuante, .Lfunc_end1-escrevaFlutuante
+	.cfi_endproc
+
+	.globl	leiaInteiro
+	.p2align	4, 0x90
+	.type	leiaInteiro,@function
+leiaInteiro:                            # @leiaInteiro
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp6:
+	.cfi_def_cfa_offset 16
+.Ltmp7:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp8:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	leaq	-4(%rbp), %rsi
+	movl	$.L.str.2, %edi
+	xorl	%eax, %eax
+	callq	__isoc99_scanf
+	movl	-4(%rbp), %eax
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+.Lfunc_end2:
+	.size	leiaInteiro, .Lfunc_end2-leiaInteiro
+	.cfi_endproc
+
+	.globl	leiaFlutuante
+	.p2align	4, 0x90
+	.type	leiaFlutuante,@function
+leiaFlutuante:                          # @leiaFlutuante
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp9:
+	.cfi_def_cfa_offset 16
+.Ltmp10:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp11:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	leaq	-4(%rbp), %rsi
+	movl	$.L.str.3, %edi
+	xorl	%eax, %eax
+	callq	__isoc99_scanf
+	movss	-4(%rbp), %xmm0         # xmm0 = mem[0],zero,zero,zero
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+.Lfunc_end3:
+	.size	leiaFlutuante, .Lfunc_end3-leiaFlutuante
+	.cfi_endproc
+
+	.type	.L.str,@object          # @.str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.L.str:
+	.asciz	"%d\n"
+	.size	.L.str, 4
+
+	.type	.L.str.1,@object        # @.str.1
+.L.str.1:
+	.asciz	"%f\n"
+	.size	.L.str.1, 4
+
+	.type	.L.str.2,@object        # @.str.2
+.L.str.2:
+	.asciz	"%d"
+	.size	.L.str.2, 3
+
+	.type	.L.str.3,@object        # @.str.3
+.L.str.3:
+	.asciz	"%f"
+	.size	.L.str.3, 3
+
+
+	.ident	"clang version 3.9.1-4ubuntu3~14.04.3 (tags/RELEASE_391/rc2)"
+	.section	".note.GNU-stack","",@progbits
